@@ -33,13 +33,13 @@ class TestFCL(unittest.TestCase):
             enable_contact = True
         )
         self.drequest = fcl.DistanceRequest(
-            enable_nearest_points = True
+            enable_nearest_points = True,
+            enable_signed_distance = True
         )
 
         self.x_axis_rot = np.array([[1.0, 0.0, 0.0],
                                     [0.0, 0.0, -1.0],
                                     [0.0, 1.0, 0.0]])
-
 
     def test_pairwise_collisions(self):
         result = fcl.CollisionResult()
